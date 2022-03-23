@@ -34,7 +34,7 @@ class TWEC:
         :param test: Folder name of the diachronic corpus files for testing.
         :param opath: Name of the desired output folder. Default is model.
         :param init_mode: If \"hidden\" (default), initialize temporal models with hidden embeddings of the context;'
-                            'if \"both\", initilize also the word embeddings;'
+                            'if \"both\", initiliaze also the word embeddings;'
                             'if \"copy\", temporal models are initiliazed as a copy of the context model
                             (same vocabulary)
         """
@@ -95,7 +95,7 @@ class TWEC:
     def train_model(self, sentences):
         model = None
         if self.compass == None or self.init_mode != "copy":
-            model = Word2Vec(sg=self.sg, size=self.size, alpha=self.static_alpha, iter=self.static_iter,
+            model = Word2Vec(sg=self.sg, vector_size=self.size, alpha=self.static_alpha, epochs=self.static_iter,
                              negative=self.negative,
                              window=self.window, min_count=self.min_count, workers=self.workers)
             model.build_vocab(sentences, trim_rule=self.internal_trimming_rule if self.compass != None else None)
