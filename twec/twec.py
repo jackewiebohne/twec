@@ -34,8 +34,8 @@ class TWEC:
         :param test: Folder name of the diachronic corpus files for testing.
         :param opath: Name of the desired output folder. Default is model.
         :param init_mode: If \"hidden\" (default), initialize temporal models with hidden embeddings of the context;'
-                            'if \"both\", initiliaze also the word embeddings;'
-                            'if \"copy\", temporal models are initiliazed as a copy of the context model
+                            'if \"both\", initialize also the word embeddings;'
+                            'if \"copy\", temporal models are initialized as a copy of the context model
                             (same vocabulary)
         """
         self.size = size
